@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meus Ganhos</title>
+  <meta name="description" content="Registre seus ganhos do dia, as horas trabalhadas e acompanhe como o mês está indo.">
+  <meta name="theme-color" content="#FFD9E6">
+  <meta name="color-scheme" content="light">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Meus Ganhos">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <nav class="tabbar" aria-label="Principal">
+      <a class="tab" href="#registrar" data-v="registrar"></a>
+      <a class="tab" href="#mes" data-v="mes"></a>
+      <a class="tab" href="#contas" data-v="contas"></a>
+      <a class="tab" href="#evolucao" data-v="evolucao"></a>
+      <a class="tab" href="#historico" data-v="historico"></a>
+      <a class="tab" href="#ajustes" data-v="ajustes"></a>
+    </nav>
+  </div>
+
+  <dialog id="dlg" aria-labelledby="dlg-title">
+    <form method="dialog">
+      <h2 id="dlg-title"></h2>
+      <p id="dlg-text"></p>
+      <div class="actions">
+        <button class="btn ghost" id="dlg-cancel" value="cancel"></button>
+        <button class="btn" id="dlg-ok" value="ok"></button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>Este aplicativo precisa de JavaScript para funcionar.</noscript>
+  <script src="app.js"></script>
+</body>
+</html>
